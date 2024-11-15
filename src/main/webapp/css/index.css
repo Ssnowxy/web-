@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    border: 0;
+    vertical-align: top;
+    z-index: 1; /* 确保图片的z-index较低 */
+    position: relative;
+}
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* 全局背景色 */
+}
+header {
+    margin: 0;
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+    background-color: steelblue;
+    font-style: italic;
+}
+nav {
+    background-color: cornflowerblue; /* 清新的浅蓝色背景 */
+    margin: 0;
+    padding: 0;
+    z-index: 1100;
+    position: relative; /* 确保导航栏在页面的前端 */
+    border: none;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* 导航栏内容居中 */
+    align-items: center;
+    position: relative;
+}
+nav ul li {
+    position: relative;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+    z-index: 1100; /* 确保下拉菜单在前端 */
+}
+nav ul li a {
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    display: block;
+}
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.5); /* 透明灰色背景 */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 1200; /* 确保下拉菜单在前端 */
+}
+nav ul li:hover ul {
+    display: block;
+}
+nav ul li ul li {
+    width: 200px;
+}
+nav ul li ul li a {
+    padding: 10px;
+    color: white;
+}
+nav ul li ul li a:hover {
+    background-color: cornflowerblue; /* 与导航栏相同的颜色 */
+}
+nav ul > li:hover > a { /* 仅在主菜单项悬停时放大 */
+    transform: scale(1.1); /* 悬浮时放大 */
+    background-color: #b0e0e6; /* 浅蓝色背景 */
+}
+nav ul .login-button {
+    margin-left: auto;
+}
+nav ul .login-button a {
+    background-color: #20b2aa; /* 清新的绿色按钮背景 */
+    border-radius: 5px;
+    color: white;
+}
+nav ul .login-button a:hover {
+    background-color: #3cb371; /* 深绿色背景 */
+}
+main {
+    padding: 0px;
+}
+section {
+    margin-bottom: 20px;
+}
+section h2 {
+    background-color: #98fb98; /* 清新的浅绿色背景 */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0; /* 设置外边距为0，消除缝隙 */
+}
+article {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.tech-text {
+    font-family: 'Orbitron', sans-serif; /* 科技感字体 */
+    font-size: 1.5em; /* 字体大小 */
+    color: lightskyblue; /* 字体颜色 */
+    text-transform: uppercase; /* 全部大写 */
+    letter-spacing: 2px; /* 字母间距 */
+    background: linear-gradient(90deg, rgba(0,230,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,230,255,1) 100%); /* 蓝白色渐变 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowing 1.5s infinite; /* 动画效果 */
+}
+.announcement-news {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e0f7fa;
+}
+.announcement-news .announcements, .announcement-news .news {
+    width: 48%;
+}
+.announcement-news h3 {
+    color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid cornflowerblue; /* 添加下划线 */
+}
+.announcement-news ul {
+    padding: 0;
+    margin: 0;
+}
+.announcement-news li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+.announcement-news a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.announcement-news a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.announcement-news a:hover {
+    text-decoration: underline;
+}
+/* 视频和相关链接容器样式 */
+.video-and-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e0f7fa;
+}
+
+/* 视频容器样式 */
+.video-container {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+.video-container h3{
+    color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid cornflowerblue; /* 添加下划线 */
+}
+/* 相关链接容器样式 */
+.related-links {
+    width: 48%;
+    margin-top: 20px;
+    padding: 20px;
+    opacity: 0.9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.related-links h3  {
+    color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid cornflowerblue; /* 添加下划线 */
+}
+.related-links ul {
+    padding: 0;
+    margin: 0;
+}
+
+.related-links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.related-links a {
+    text-decoration: none;
+    color: #333333;
+    padding: 10px;
+   opacity: 0.9;
+    border: 1px solid #20b2aa;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.related-links a:hover {
+    background-color: #20b2aa;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.bottom {
+    padding: 20px;
+    background-color: steelblue;
+    text-align: center;
+}
+.page-header h2 {
+    text-decoration: none;
+}
